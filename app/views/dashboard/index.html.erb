@@ -1,0 +1,11 @@
+<% title "User Dashboard" %>
+
+<% if can? :manage, @users %>
+  <p>Hello, you are an Admin</p>
+  <h2>Users</h2>
+  <% for user in @user %>
+    <p><%= user.name %> <%= user.email %> <%= link_to "Edit User", edit_user_path(user) %> <%= link_to "Delete User", user, :confirm => "Are you sure?", :method => :delete %>
+  <% end %>
+<% else %>
+  <p>Hello, you are not an Admin</p>
+<% end %>
