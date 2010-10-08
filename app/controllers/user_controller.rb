@@ -15,7 +15,7 @@ class UserController < ApplicationController
       flash[:notice] = "Successfully created User." 
       redirect_to root_path
     else
-      render :action => 'newuser'
+      render :action => 'new'
     end
   end
   
@@ -31,7 +31,7 @@ class UserController < ApplicationController
       flash[:notice] = "Successfully updated User."
       redirect_to root_path
     else
-      render :action => 'edituser'
+      render :action => 'edit'
     end
   end
   
