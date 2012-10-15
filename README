@@ -1,1 +1,3 @@
 This is a quick and simple example of how you can use Devise with CanCan so an Admin(role) can manage Users.
+
+Data is stored in MongoDB with Mongoid.
